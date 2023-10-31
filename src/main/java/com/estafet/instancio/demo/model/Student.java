@@ -1,12 +1,11 @@
 package com.estafet.instancio.demo.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import com.estafet.instancio.demo.model.Grade;
-
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,6 +16,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 public class Student {
 
 	private String studentId;
@@ -24,7 +24,7 @@ public class Student {
 	private Address address;
 	private Phone phone;
 	private String email;
-	private Date dateOfBirth;
+	private LocalDate dateOfBirth;
 	private List<Grade> grades = new ArrayList<>();
 }
 
